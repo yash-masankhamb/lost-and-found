@@ -1,0 +1,26 @@
+# Environment & Secret Files (CRITICAL: Keeps passwords safe)
+.env
+.env.local
+*.env
+
+# Dependencies (Node modules for both client and server)
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# User file uploads
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Build outputs
+dist/
+build/
+
+# Logs & System junk
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
