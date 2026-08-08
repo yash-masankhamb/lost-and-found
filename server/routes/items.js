@@ -61,11 +61,12 @@ router.post("/",(req,res)=>{
 `;
 
     db.query(sql,[item_name, type, location, date, time, description, status, image_url, contact_name, email, phone],(err,result)=>{
-        if(err){
+        if (err) {
+            console.error("MYSQL ERROR:", err);
             return res.status(500).json({
-                message:"Database error"
+                message: "Database error",
+                error: err.message
             });
-           
         }
         res.status(201).json({
             message: "Item added successfully",
